@@ -1,3 +1,4 @@
 [submodule "FIR Filter"]
 	path = FIR Filter
 	url = https://github.com/maxdoublee/FIR-Filter
+	branch = main
