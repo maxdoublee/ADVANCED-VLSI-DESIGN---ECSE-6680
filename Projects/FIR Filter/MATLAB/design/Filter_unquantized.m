@@ -41,6 +41,7 @@ b = firpm(N, F, A, W);
 % View the filter's frequency response
 Hd = dfilt.dffir(b); % Create a filter object
 fvtool(Hd, 'Analysis', 'freq'); % Launch fvtool with the frequency response analysis
+fvtool(Hd, 'Analysis', 'phase'); % Just the phase response without magnitude 
 
 % Customize the plot
 hFVT = fvtool(b, 1); % Give the handle to FVTool

@@ -1,0 +1,39 @@
+SNR and ENOB Testing:
+Unquantized Filter SNR: 5.13 dB
+Quantized Filter SNR: 5.26 dB
+Unquantized Filter ENOB: 0.56 bits
+Quantized Filter ENOB: 0.58 bits
+
+Dynamic Range Testing:
+Amplitude: 0.01 - Unquantized SNR: 0.31 dB, Quantized SNR: 0.29 dB
+Amplitude: 0.12 - Unquantized SNR: 0.32 dB, Quantized SNR: 0.31 dB
+Amplitude: 0.23 - Unquantized SNR: 0.35 dB, Quantized SNR: 0.34 dB
+Amplitude: 0.34 - Unquantized SNR: 0.39 dB, Quantized SNR: 0.39 dB
+Amplitude: 0.45 - Unquantized SNR: 0.45 dB, Quantized SNR: 0.45 dB
+Amplitude: 0.56 - Unquantized SNR: 0.52 dB, Quantized SNR: 0.53 dB
+Amplitude: 0.67 - Unquantized SNR: 0.61 dB, Quantized SNR: 0.62 dB
+Amplitude: 0.78 - Unquantized SNR: 0.71 dB, Quantized SNR: 0.73 dB
+Amplitude: 0.89 - Unquantized SNR: 0.82 dB, Quantized SNR: 0.84 dB
+Amplitude: 1.00 - Unquantized SNR: 0.95 dB, Quantized SNR: 0.97 dB
+
+Sweeping Signal Frequency:
+Frequency: 4800.00 Hz - Unquantized SNR: 1.29 dB, Quantized SNR: 1.30 dB
+Frequency: 4880.00 Hz - Unquantized SNR: 1.51 dB, Quantized SNR: 1.53 dB
+Frequency: 4960.00 Hz - Unquantized SNR: 3.56 dB, Quantized SNR: 3.57 dB
+Frequency: 5040.00 Hz - Unquantized SNR: 5.10 dB, Quantized SNR: 5.14 dB
+Frequency: 5120.00 Hz - Unquantized SNR: 5.87 dB, Quantized SNR: 5.91 dB
+Frequency: 5200.00 Hz - Unquantized SNR: 6.05 dB, Quantized SNR: 6.09 dB
+Frequency: 5280.00 Hz - Unquantized SNR: 5.90 dB, Quantized SNR: 5.94 dB
+Frequency: 5360.00 Hz - Unquantized SNR: 5.66 dB, Quantized SNR: 5.70 dB
+Frequency: 5440.00 Hz - Unquantized SNR: 5.48 dB, Quantized SNR: 5.52 dB
+Frequency: 5520.00 Hz - Unquantized SNR: 5.42 dB, Quantized SNR: 5.46 dB
+
+Harmonic Distortion Analysis (THD):
+Unquantized Filter THD: -297.13 dB
+Quantized Filter THD: -297.11 dB
+
+Overflow Testing:
+Maximum Output Amplitude (Unquantized): 37785.84
+Maximum Output Amplitude (Quantized): 37779.91
+Minimum Output Amplitude (Quantized): -37779.91
+Peak-to-Peak Amplitude: 75559.815912

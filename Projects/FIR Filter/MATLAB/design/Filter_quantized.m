@@ -52,6 +52,7 @@ end
 % View the filter's frequency response
 Hd = dfilt.dffir(b_quantized_double); % Create a filter object
 fvtool(Hd, 'Analysis', 'freq'); % Launch fvtool with the frequency response analysis
+fvtool(Hd, 'Analysis', 'phase'); % Just the phase response without magnitude 
 
 % Customize the plot
 hFVT = fvtool(b_quantized_double, 1); % Give the handle to FVTool
