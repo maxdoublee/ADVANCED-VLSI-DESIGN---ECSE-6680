@@ -3,7 +3,7 @@ Advanced VLSI Design - Course Project | ECSE 6680
  
 ## Overview
 
-This repository hosts the low-pass FIR filter project. Central to the project is the construction of a 100-tap filter using Matlab, meticulously tuned to operate within a narrow transition region from 0.2π to 0.23π rad/sample and achieve a stopband attenuation of at least 80dB. The project not only calls for a theoretical design approach, referencing MathWorks’ extensive [documentation](https://www.mathworks.com/help/signal/ug/firfilter-design.html) for guidance, but also a hands-on hardware application using Verilog for the filter implementation. Verilog, employed alongside FPGA design tools Quartus Prime and ModelSim, translate the Matlab-designed filter into a high-performance digital circuit. 
+This repository hosts the low-pass FIR filter project. Central to the project is the construction of a 100-tap filter using Matlab, meticulously tuned to operate within a narrow transition region from 0.2π to 0.23π rad/sample and achieve a stopband attenuation of at least 80dB. The project not only calls for a theoretical design approach, referencing MathWorks’ extensive [documentation](https://www.mathworks.com/help/signal/ug/fir-filter-design.html) for guidance, but also a hands-on hardware application using Verilog for the filter implementation. Verilog, employed alongside FPGA design tools Quartus Prime and ModelSim, translate the Matlab-designed filter into a high-performance digital circuit. 
 
 In navigating the architectural landscape of digital filters, the project delves into advanced concepts such as pipelining to bolster data processing rates and the incorporation of reduced-complexity parallel processing for configurations L=2, balancing the trade-offs between speed and hardware resource utilization. This comprehensive documentation captures the essence of the project, detailing the rationale behind architectural choices and the intricacies of implementing an efficient FIR filter that adheres to precise performance criteria.
 
@@ -48,11 +48,13 @@ The core architectural elements of the FIR filter include:
 Below are the conceptual diagrams representing the architecture of our FIR filter:
 
 - **Pipelined FIR Filter Structure**:
-  
+
+<img src="https://www.mathworks.com/help/dsphdl/ug/fir_arch_systolic_sym.png" width="300">
 ![Pipelined FIR Filter Structure](https://www.mathworks.com/help/dsphdl/ug/fir_arch_systolic_sym.png)
 
 - **Parallel Processing in FIR Filter (L=2)**:
-  
+
+<img src="https://i.stack.imgur.com/O4xUz.png" width="300">
 ![Parallel Processing in FIR Filter](https://i.stack.imgur.com/O4xUz.png)
 
 These diagrams offer a visual understanding of the filter's internal structure and operation flow, showcasing the data movement through the filter stages and the parallel processing of input samples.
@@ -63,7 +65,73 @@ Both pipelining and parallel processing are pivotal in the pursuit of a filter d
 
 ### MATLAB Analysis
 
-Present the filter frequency response of the original and quantized filter. Discuss the quantization effect and overflow management strategies.
+The primary objective of the MATLAB analysis was to assess the impact of quantization on a 100-tap low-pass FIR filter. The impulse responses for both the unquantized and quantized filters are presented in Figures 5 and 6. These figures visually represent the inherent differences in the filter's reaction to a delta function input. The response's spread and magnitude clearly depict the smoothing effect that quantization imparts on the system.
+
+![Impulse Response (Unquantized)](path-to-impulse-response-unquantized.png)
+*Figure 5: Impulse Response (Unquantized)*
+
+![Impulse Response (Quantized)](path-to-impulse-response-quantized.png)
+*Figure 6: Impulse Response (Quantized)*
+
+Figures 7 and 8 offer a deeper look into the frequency domain, contrasting the original and quantized filters. The transition band between the passband and stopband is of particular interest, showing the effect of quantization on the filter's sharpness and roll-off characteristics. A narrower transition band correlates with higher filter order and complexity, providing a critical comparison point for the two implementations.
+
+![Magnitude and Phase Response (Unquantized)](path-to-magnitude-phase-response-unquantized.png)
+*Figure 7: Magnitude and Phase Response (Unquantized)*
+
+![Magnitude and Phase Response (Quantized)](path-to-magnitude-phase-response-quantized.png)
+*Figure 8: Magnitude and Phase Response (Quantized)*
+
+The quantization of filter coefficients can lead to precision loss, which can accumulate and cause signal distortion. To manage this, techniques such as increased word length and dithering were applied. These techniques helped maintain the overall filter performance within acceptable limits by reducing quantization noise and overflow errors.
+
+#### SNR and ENOB Testing
+
+The Signal-to-Noise Ratio (SNR) and Effective Number of Bits (ENOB) tests provide a quantitative measure of the filter's performance, with the ENOB offering insight into the resolution of the filter's digital representation. 
+
+| SNR (dB) | Unquantized Filter | Quantized Filter |
+|----------|---------------------|------------------|
+| ENOB (bits) | 0.56 | 0.58 |
+
+#### Dynamic Range Testing
+
+The dynamic range tests were conducted to observe the SNR over a range of signal amplitudes. This test is crucial as it informs about the filter's capability to handle various signal strengths without significant performance degradation, especially in the presence of quantization.
+
+| Amplitude | Unquantized SNR (dB) | Quantized SNR (dB) |
+|-----------|-----------------------|--------------------|
+| 0.01      | 0.31                  | 0.29               |
+| ...       | ...                   | ...                |
+| 1.00      | 0.95                  | 0.97               |
+
+#### Sweeping Signal Frequency
+
+Sweeping signal frequency analysis further elucidates the filter's ability to maintain performance over a spectrum of frequencies. This provides valuable insights into the filter's stability and adaptability to frequency changes, reflecting the robustness of the design.
+
+| Frequency (Hz) | Unquantized SNR (dB) | Quantized SNR (dB) |
+|----------------|-----------------------|--------------------|
+| 4800.00        | 1.29                  | 1.30               |
+| ...            | ...                   | ...                |
+| 5520.00        | 5.42                  | 5.46               |
+
+#### Harmonic Distortion Analysis (THD)
+
+Total Harmonic Distortion (THD) analysis is a critical metric for evaluating the linearity and accuracy of the filter. Lower THD values indicate a more accurate reproduction of the input signal without harmonic distortion, which is desired in high-fidelity systems.
+
+| Filter Type    | THD (dB)      |
+|----------------|---------------|
+| Unquantized    | -297.13       |
+| Quantized      | -297.11       |
+
+#### Overflow Testing
+
+Overflow testing is indicative of how well the system handles the digital signal's amplitude without inducing clipping or saturation. Properly managing the dynamic range is essential to prevent overflow, ensuring the filter's output remains within the bounds of the system's representational limits.
+
+| Parameter                        | Unquantized       | Quantized         |
+|----------------------------------|-------------------|-------------------|
+| Maximum Output Amplitude         | 37785.84          | 37779.91          |
+| Minimum Output Amplitude         | -                 | -37779.91         |
+| Peak-to-Peak Amplitude           | 75559.815912      | 75559.815912      |
+
+The detailed analysis conducted in MATLAB served as a decisive phase, critically informing the subsequent hardware implementation stages. The insight gained
+
 
 ### Hardware Analysis
 
@@ -72,3 +140,7 @@ Summarize the hardware implementation results, including area, clock frequency, 
 ## Conclusion
 
 Provide additional analysis and draw conclusions about your project's success and potential areas for improvement.
+
+## Reference Links
+
+
