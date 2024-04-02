@@ -1,0 +1,57 @@
+Thermal Power Dissipation by Hierarchy report for fir_filter
+Mon Apr 01 19:15:30 2024
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Thermal Power Dissipation by Hierarchy
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Thermal Power Dissipation by Hierarchy                                                                                                                                                                                                                                                            ;
++------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+-------------------------------------------------------------------------------------------------------+
+; Compilation Hierarchy Node               ; Total Thermal Power by Hierarchy (1) ; Block Thermal Dynamic Power (1) ; Block Thermal Static Power (1)(2) ; Routing Thermal Dynamic Power (1) ; Full Hierarchy Name                                                                                   ;
++------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+-------------------------------------------------------------------------------------------------------+
+; |fir_filter                              ; 6.56 mW (4.19 mW)                    ; 3.92 mW (1.55 mW)               ; 1.50 mW (1.50 mW)                 ; 1.14 mW (1.14 mW)                 ; |fir_filter                                                                                           ;
+;     |hard_block:auto_generated_inst      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fir_filter|hard_block:auto_generated_inst                                                            ;
+;     |altshift_taps:shift_reg_rtl_0       ; 1.19 mW (0.00 mW)                    ; 1.19 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fir_filter|altshift_taps:shift_reg_rtl_0                                                             ;
+;         |shift_taps_pev:auto_generated   ; 1.19 mW (0.00 mW)                    ; 1.19 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fir_filter|altshift_taps:shift_reg_rtl_0|shift_taps_pev:auto_generated                               ;
+;             |altsyncram_djc1:altsyncram5 ; 1.16 mW (1.16 mW)                    ; 1.16 mW (1.16 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fir_filter|altshift_taps:shift_reg_rtl_0|shift_taps_pev:auto_generated|altsyncram_djc1:altsyncram5   ;
+;             |cntr_mjf:cntr1              ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fir_filter|altshift_taps:shift_reg_rtl_0|shift_taps_pev:auto_generated|cntr_mjf:cntr1                ;
+;                 |cmpr_e9c:cmpr9          ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fir_filter|altshift_taps:shift_reg_rtl_0|shift_taps_pev:auto_generated|cntr_mjf:cntr1|cmpr_e9c:cmpr9 ;
+;             |cntr_a3h:cntr6              ; 0.02 mW (0.02 mW)                    ; 0.02 mW (0.02 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fir_filter|altshift_taps:shift_reg_rtl_0|shift_taps_pev:auto_generated|cntr_a3h:cntr6                ;
+;     |altshift_taps:shift_reg_rtl_1       ; 1.19 mW (0.00 mW)                    ; 1.19 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fir_filter|altshift_taps:shift_reg_rtl_1                                                             ;
+;         |shift_taps_oev:auto_generated   ; 1.19 mW (0.01 mW)                    ; 1.19 mW (0.01 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fir_filter|altshift_taps:shift_reg_rtl_1|shift_taps_oev:auto_generated                               ;
+;             |altsyncram_bjc1:altsyncram5 ; 1.16 mW (1.16 mW)                    ; 1.16 mW (1.16 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fir_filter|altshift_taps:shift_reg_rtl_1|shift_taps_oev:auto_generated|altsyncram_bjc1:altsyncram5   ;
+;             |cntr_ljf:cntr1              ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fir_filter|altshift_taps:shift_reg_rtl_1|shift_taps_oev:auto_generated|cntr_ljf:cntr1                ;
+;             |cntr_93h:cntr6              ; 0.02 mW (0.02 mW)                    ; 0.02 mW (0.02 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |fir_filter|altshift_taps:shift_reg_rtl_1|shift_taps_oev:auto_generated|cntr_93h:cntr6                ;
++------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+-------------------------------------------------------------------------------------------------------+
+(1) Value in parentheses is the power consumed at that level of hierarchy. Value not in parentheses is the power consumed at that level of hierarchy plus the power consumed by all levels of hierarchy below it.
+
+(2) The "Block Thermal Static Power" for all levels of hierarchy except the top-level hierarchy is part of the "Core Static Thermal Power Dissipation" value found on the PowerPlay Power Analyzer-->Summary report panel. The "Core Static Thermal Power Dissipation" also contains the thermal static power dissipated by the routing.
+
+

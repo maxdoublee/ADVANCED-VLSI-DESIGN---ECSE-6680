@@ -1,0 +1,137 @@
+Details report for fir_filter
+Mon Apr 01 18:52:44 2024
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Estimated Delay Added for Hold Timing Details
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                                                                                                                                                                                               ;
++-----------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+-------------------+
+; Source Register                                                                               ; Destination Register                                                                                                    ; Delay Added in ns ;
++-----------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+-------------------+
+; altshift_taps:shift_reg_rtl_0|shift_taps_pev:auto_generated|cntr_mjf:cntr1|counter_reg_bit[3] ; altshift_taps:shift_reg_rtl_0|shift_taps_pev:auto_generated|dffe3a[4]                                                   ; 0.511             ;
+; accum_reg_half2[27]                                                                           ; accum_reg_half2[31]                                                                                                     ; 0.505             ;
+; accum_reg_half2[19]                                                                           ; accum_reg_half2[31]                                                                                                     ; 0.505             ;
+; accum_reg_half2[7]                                                                            ; accum_reg_half2[31]                                                                                                     ; 0.504             ;
+; accum_reg_half2[18]                                                                           ; accum_reg_half2[31]                                                                                                     ; 0.504             ;
+; accum_reg_half1[27]                                                                           ; accum_reg_half1[31]                                                                                                     ; 0.503             ;
+; mult_reg[49][21]                                                                              ; accum_reg_half1[31]                                                                                                     ; 0.503             ;
+; mult_reg[49][24]                                                                              ; accum_reg_half1[31]                                                                                                     ; 0.502             ;
+; mult_reg[49][22]                                                                              ; accum_reg_half1[31]                                                                                                     ; 0.502             ;
+; mult_reg[49][23]                                                                              ; accum_reg_half1[31]                                                                                                     ; 0.502             ;
+; mult_reg[49][1]                                                                               ; accum_reg_half1[31]                                                                                                     ; 0.499             ;
+; accum_reg_half2[29]                                                                           ; accum_reg_half2[31]                                                                                                     ; 0.499             ;
+; accum_reg_half2[15]                                                                           ; accum_reg_half2[31]                                                                                                     ; 0.499             ;
+; accum_reg_half2[1]                                                                            ; accum_reg_half2[31]                                                                                                     ; 0.499             ;
+; accum_reg_half1[20]                                                                           ; accum_reg_half1[31]                                                                                                     ; 0.498             ;
+; accum_reg_half1[29]                                                                           ; accum_reg_half1[31]                                                                                                     ; 0.497             ;
+; accum_reg_half2[21]                                                                           ; accum_reg_half2[31]                                                                                                     ; 0.497             ;
+; accum_reg_half2[9]                                                                            ; accum_reg_half2[31]                                                                                                     ; 0.497             ;
+; accum_reg_half2[0]                                                                            ; accum_reg_half2[31]                                                                                                     ; 0.496             ;
+; accum_reg_half2[20]                                                                           ; accum_reg_half2[31]                                                                                                     ; 0.495             ;
+; accum_reg_half2[12]                                                                           ; accum_reg_half2[31]                                                                                                     ; 0.495             ;
+; altshift_taps:shift_reg_rtl_1|shift_taps_oev:auto_generated|cntr_ljf:cntr1|counter_reg_bit[2] ; altshift_taps:shift_reg_rtl_1|shift_taps_oev:auto_generated|dffe3a[4]                                                   ; 0.495             ;
+; altshift_taps:shift_reg_rtl_1|shift_taps_oev:auto_generated|cntr_ljf:cntr1|counter_reg_bit[3] ; altshift_taps:shift_reg_rtl_1|shift_taps_oev:auto_generated|dffe3a[4]                                                   ; 0.492             ;
+; altshift_taps:shift_reg_rtl_0|shift_taps_pev:auto_generated|cntr_mjf:cntr1|counter_reg_bit[1] ; altshift_taps:shift_reg_rtl_0|shift_taps_pev:auto_generated|dffe3a[4]                                                   ; 0.459             ;
+; altshift_taps:shift_reg_rtl_0|shift_taps_pev:auto_generated|cntr_mjf:cntr1|counter_reg_bit[0] ; altshift_taps:shift_reg_rtl_0|shift_taps_pev:auto_generated|dffe3a[4]                                                   ; 0.454             ;
+; accum_reg_half2[5]                                                                            ; accum_reg_half2[31]                                                                                                     ; 0.444             ;
+; accum_reg_half2[25]                                                                           ; accum_reg_half2[31]                                                                                                     ; 0.442             ;
+; accum_reg_half1[25]                                                                           ; accum_reg_half1[31]                                                                                                     ; 0.442             ;
+; accum_reg_half2[8]                                                                            ; accum_reg_half2[31]                                                                                                     ; 0.442             ;
+; accum_reg_half1[28]                                                                           ; accum_reg_half1[31]                                                                                                     ; 0.441             ;
+; accum_reg_half2[28]                                                                           ; accum_reg_half2[31]                                                                                                     ; 0.441             ;
+; accum_reg_half2[13]                                                                           ; accum_reg_half2[31]                                                                                                     ; 0.441             ;
+; accum_reg_half2[23]                                                                           ; accum_reg_half2[31]                                                                                                     ; 0.438             ;
+; accum_reg_half2[3]                                                                            ; accum_reg_half2[31]                                                                                                     ; 0.438             ;
+; accum_reg_half2[6]                                                                            ; accum_reg_half2[31]                                                                                                     ; 0.436             ;
+; accum_reg_half1[26]                                                                           ; accum_reg_half1[31]                                                                                                     ; 0.435             ;
+; accum_reg_half2[26]                                                                           ; accum_reg_half2[31]                                                                                                     ; 0.434             ;
+; accum_reg_half2[16]                                                                           ; accum_reg_half2[31]                                                                                                     ; 0.434             ;
+; mult_reg[49][7]                                                                               ; accum_reg_half1[31]                                                                                                     ; 0.423             ;
+; mult_reg[49][4]                                                                               ; accum_reg_half1[31]                                                                                                     ; 0.422             ;
+; mult_reg[49][8]                                                                               ; accum_reg_half1[31]                                                                                                     ; 0.421             ;
+; mult_reg[49][2]                                                                               ; accum_reg_half1[31]                                                                                                     ; 0.421             ;
+; mult_reg[49][3]                                                                               ; accum_reg_half1[31]                                                                                                     ; 0.415             ;
+; mult_reg[49][5]                                                                               ; accum_reg_half1[31]                                                                                                     ; 0.413             ;
+; shift_reg[0][0]                                                                               ; altshift_taps:shift_reg_rtl_1|shift_taps_oev:auto_generated|altsyncram_bjc1:altsyncram5|ram_block8a15~porta_datain_reg0 ; 0.390             ;
+; shift_reg[0][3]                                                                               ; altshift_taps:shift_reg_rtl_1|shift_taps_oev:auto_generated|altsyncram_bjc1:altsyncram5|ram_block8a12~porta_datain_reg0 ; 0.390             ;
+; shift_reg[0][15]                                                                              ; altshift_taps:shift_reg_rtl_1|shift_taps_oev:auto_generated|altsyncram_bjc1:altsyncram5|ram_block8a0~porta_datain_reg0  ; 0.390             ;
+; shift_reg[0][8]                                                                               ; altshift_taps:shift_reg_rtl_1|shift_taps_oev:auto_generated|altsyncram_bjc1:altsyncram5|ram_block8a7~porta_datain_reg0  ; 0.382             ;
+; mult_reg[49][11]                                                                              ; accum_reg_half1[31]                                                                                                     ; 0.372             ;
+; mult_reg[49][9]                                                                               ; accum_reg_half1[31]                                                                                                     ; 0.372             ;
+; mult_reg[49][15]                                                                              ; accum_reg_half1[31]                                                                                                     ; 0.371             ;
+; mult_reg[49][6]                                                                               ; accum_reg_half1[31]                                                                                                     ; 0.371             ;
+; altshift_taps:shift_reg_rtl_1|shift_taps_oev:auto_generated|cntr_ljf:cntr1|counter_reg_bit[4] ; altshift_taps:shift_reg_rtl_1|shift_taps_oev:auto_generated|dffe3a[4]                                                   ; 0.363             ;
+; altshift_taps:shift_reg_rtl_0|shift_taps_pev:auto_generated|cntr_mjf:cntr1|counter_reg_bit[4] ; altshift_taps:shift_reg_rtl_0|shift_taps_pev:auto_generated|dffe3a[4]                                                   ; 0.359             ;
+; mult_reg[49][17]                                                                              ; accum_reg_half1[31]                                                                                                     ; 0.356             ;
+; mult_reg[49][13]                                                                              ; accum_reg_half1[31]                                                                                                     ; 0.356             ;
+; mult_reg[49][16]                                                                              ; accum_reg_half1[31]                                                                                                     ; 0.351             ;
+; mult_reg[49][14]                                                                              ; accum_reg_half1[31]                                                                                                     ; 0.351             ;
+; mult_reg[49][10]                                                                              ; accum_reg_half1[31]                                                                                                     ; 0.351             ;
+; mult_reg[49][12]                                                                              ; accum_reg_half1[31]                                                                                                     ; 0.350             ;
+; altshift_taps:shift_reg_rtl_1|shift_taps_oev:auto_generated|cntr_ljf:cntr1|counter_reg_bit[1] ; altshift_taps:shift_reg_rtl_1|shift_taps_oev:auto_generated|dffe3a[4]                                                   ; 0.280             ;
+; altshift_taps:shift_reg_rtl_1|shift_taps_oev:auto_generated|cntr_ljf:cntr1|counter_reg_bit[5] ; altshift_taps:shift_reg_rtl_1|shift_taps_oev:auto_generated|dffe3a[4]                                                   ; 0.280             ;
+; altshift_taps:shift_reg_rtl_1|shift_taps_oev:auto_generated|cntr_ljf:cntr1|counter_reg_bit[0] ; altshift_taps:shift_reg_rtl_1|shift_taps_oev:auto_generated|dffe3a[4]                                                   ; 0.280             ;
+; altshift_taps:shift_reg_rtl_0|shift_taps_pev:auto_generated|cntr_mjf:cntr1|counter_reg_bit[2] ; altshift_taps:shift_reg_rtl_0|shift_taps_pev:auto_generated|dffe3a[4]                                                   ; 0.278             ;
+; altshift_taps:shift_reg_rtl_0|shift_taps_pev:auto_generated|cntr_mjf:cntr1|counter_reg_bit[5] ; altshift_taps:shift_reg_rtl_0|shift_taps_pev:auto_generated|dffe3a[4]                                                   ; 0.278             ;
+; accum_reg_half2[22]                                                                           ; accum_reg_half2[31]                                                                                                     ; 0.238             ;
+; accum_reg_half2[2]                                                                            ; accum_reg_half2[31]                                                                                                     ; 0.238             ;
+; accum_reg_half2[14]                                                                           ; accum_reg_half2[31]                                                                                                     ; 0.235             ;
+; accum_reg_half2[24]                                                                           ; accum_reg_half2[31]                                                                                                     ; 0.233             ;
+; accum_reg_half2[10]                                                                           ; accum_reg_half2[31]                                                                                                     ; 0.233             ;
+; accum_reg_half2[30]                                                                           ; accum_reg_half2[31]                                                                                                     ; 0.232             ;
+; accum_reg_half2[4]                                                                            ; accum_reg_half2[31]                                                                                                     ; 0.232             ;
+; shift_reg[0][13]                                                                              ; altshift_taps:shift_reg_rtl_1|shift_taps_oev:auto_generated|altsyncram_bjc1:altsyncram5|ram_block8a2~porta_datain_reg0  ; 0.229             ;
+; shift_reg[0][14]                                                                              ; altshift_taps:shift_reg_rtl_1|shift_taps_oev:auto_generated|altsyncram_bjc1:altsyncram5|ram_block8a1~porta_datain_reg0  ; 0.229             ;
+; accum_reg_half1[30]                                                                           ; accum_reg_half1[31]                                                                                                     ; 0.228             ;
+; accum_reg_half2[17]                                                                           ; accum_reg_half2[31]                                                                                                     ; 0.214             ;
+; accum_reg_half2[31]                                                                           ; accum_reg_half2[31]                                                                                                     ; 0.211             ;
+; accum_reg_half2[11]                                                                           ; accum_reg_half2[31]                                                                                                     ; 0.211             ;
+; altshift_taps:shift_reg_rtl_0|shift_taps_pev:auto_generated|dffe7                             ; altshift_taps:shift_reg_rtl_0|shift_taps_pev:auto_generated|altsyncram_djc1:altsyncram5|ram_block8a0                    ; 0.211             ;
+; accum_reg_half1[31]                                                                           ; accum_reg_half1[31]                                                                                                     ; 0.209             ;
+; altshift_taps:shift_reg_rtl_1|shift_taps_oev:auto_generated|dffe7                             ; altshift_taps:shift_reg_rtl_1|shift_taps_oev:auto_generated|altsyncram_bjc1:altsyncram5|ram_block8a0                    ; 0.204             ;
+; shift_reg[0][9]                                                                               ; altshift_taps:shift_reg_rtl_1|shift_taps_oev:auto_generated|altsyncram_bjc1:altsyncram5|ram_block8a6~porta_datain_reg0  ; 0.204             ;
+; shift_reg[0][10]                                                                              ; altshift_taps:shift_reg_rtl_1|shift_taps_oev:auto_generated|altsyncram_bjc1:altsyncram5|ram_block8a5~porta_datain_reg0  ; 0.204             ;
+; altshift_taps:shift_reg_rtl_1|shift_taps_oev:auto_generated|dffe3a[0]                         ; altshift_taps:shift_reg_rtl_1|shift_taps_oev:auto_generated|altsyncram_bjc1:altsyncram5|ram_block8a0~portb_address_reg0 ; 0.180             ;
+; altshift_taps:shift_reg_rtl_1|shift_taps_oev:auto_generated|dffe3a[3]                         ; altshift_taps:shift_reg_rtl_1|shift_taps_oev:auto_generated|altsyncram_bjc1:altsyncram5|ram_block8a0~portb_address_reg0 ; 0.176             ;
+; altshift_taps:shift_reg_rtl_1|shift_taps_oev:auto_generated|dffe3a[5]                         ; altshift_taps:shift_reg_rtl_1|shift_taps_oev:auto_generated|altsyncram_bjc1:altsyncram5|ram_block8a0~portb_address_reg0 ; 0.161             ;
+; altshift_taps:shift_reg_rtl_1|shift_taps_oev:auto_generated|dffe3a[2]                         ; altshift_taps:shift_reg_rtl_1|shift_taps_oev:auto_generated|altsyncram_bjc1:altsyncram5|ram_block8a0~portb_address_reg0 ; 0.147             ;
+; altshift_taps:shift_reg_rtl_0|shift_taps_pev:auto_generated|dffe3a[5]                         ; altshift_taps:shift_reg_rtl_0|shift_taps_pev:auto_generated|altsyncram_djc1:altsyncram5|ram_block8a0~portb_address_reg0 ; 0.136             ;
+; altshift_taps:shift_reg_rtl_0|shift_taps_pev:auto_generated|dffe3a[0]                         ; altshift_taps:shift_reg_rtl_0|shift_taps_pev:auto_generated|altsyncram_djc1:altsyncram5|ram_block8a0~portb_address_reg0 ; 0.132             ;
+; altshift_taps:shift_reg_rtl_1|shift_taps_oev:auto_generated|dffe3a[4]                         ; altshift_taps:shift_reg_rtl_1|shift_taps_oev:auto_generated|altsyncram_bjc1:altsyncram5|ram_block8a0~portb_address_reg0 ; 0.130             ;
+; altshift_taps:shift_reg_rtl_0|shift_taps_pev:auto_generated|dffe3a[2]                         ; altshift_taps:shift_reg_rtl_0|shift_taps_pev:auto_generated|altsyncram_djc1:altsyncram5|ram_block8a0~portb_address_reg0 ; 0.116             ;
+; altshift_taps:shift_reg_rtl_0|shift_taps_pev:auto_generated|dffe3a[4]                         ; altshift_taps:shift_reg_rtl_0|shift_taps_pev:auto_generated|altsyncram_djc1:altsyncram5|ram_block8a0~portb_address_reg0 ; 0.110             ;
+; altshift_taps:shift_reg_rtl_1|shift_taps_oev:auto_generated|dffe3a[1]                         ; altshift_taps:shift_reg_rtl_1|shift_taps_oev:auto_generated|altsyncram_bjc1:altsyncram5|ram_block8a0~portb_address_reg0 ; 0.102             ;
+; altshift_taps:shift_reg_rtl_0|shift_taps_pev:auto_generated|dffe3a[3]                         ; altshift_taps:shift_reg_rtl_0|shift_taps_pev:auto_generated|altsyncram_djc1:altsyncram5|ram_block8a0~portb_address_reg0 ; 0.100             ;
+; mult_reg[49][19]                                                                              ; accum_reg_half1[31]                                                                                                     ; 0.069             ;
++-----------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+-------------------+
+Note: This table only shows the top 95 path(s) that have the largest delay added for hold.
+
+

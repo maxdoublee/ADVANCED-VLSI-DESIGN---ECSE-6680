@@ -1,0 +1,7 @@
+Early Power Estimator File Generator Status : Successful - Mon Apr 01 18:34:01 2024
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : fir_filter
+Top-level Entity Name : fir_filter
+Family : Cyclone V
+Device : 5CEBA4F23C7
+Power Estimation Confidence : Low: user provided insufficient toggle rate data

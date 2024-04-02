@@ -1,0 +1,54 @@
+Resource Utilization by Entity report for fir_filter
+Mon Apr 01 18:40:22 2024
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Resource Utilization by Entity
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                      ;
++----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                   ; Entity Name     ; Library Name ;
++----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; |fir_filter                            ; 171 (108)           ; 316 (278)                 ; 1552              ; 2          ; 50   ; 0            ; |fir_filter                                                                                           ; fir_filter      ; work         ;
+;    |altshift_taps:shift_reg_rtl_0|     ; 32 (0)              ; 19 (0)                    ; 784               ; 0          ; 0    ; 0            ; |fir_filter|altshift_taps:shift_reg_rtl_0                                                             ; altshift_taps   ; work         ;
+;       |shift_taps_pev:auto_generated|  ; 32 (11)             ; 19 (7)                    ; 784               ; 0          ; 0    ; 0            ; |fir_filter|altshift_taps:shift_reg_rtl_0|shift_taps_pev:auto_generated                               ; shift_taps_pev  ; work         ;
+;          |altsyncram_djc1:altsyncram5| ; 0 (0)               ; 0 (0)                     ; 784               ; 0          ; 0    ; 0            ; |fir_filter|altshift_taps:shift_reg_rtl_0|shift_taps_pev:auto_generated|altsyncram_djc1:altsyncram5   ; altsyncram_djc1 ; work         ;
+;          |cntr_a3h:cntr6|              ; 12 (12)             ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |fir_filter|altshift_taps:shift_reg_rtl_0|shift_taps_pev:auto_generated|cntr_a3h:cntr6                ; cntr_a3h        ; work         ;
+;          |cntr_mjf:cntr1|              ; 9 (8)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |fir_filter|altshift_taps:shift_reg_rtl_0|shift_taps_pev:auto_generated|cntr_mjf:cntr1                ; cntr_mjf        ; work         ;
+;             |cmpr_e9c:cmpr9|           ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |fir_filter|altshift_taps:shift_reg_rtl_0|shift_taps_pev:auto_generated|cntr_mjf:cntr1|cmpr_e9c:cmpr9 ; cmpr_e9c        ; work         ;
+;    |altshift_taps:shift_reg_rtl_1|     ; 31 (0)              ; 19 (0)                    ; 768               ; 0          ; 0    ; 0            ; |fir_filter|altshift_taps:shift_reg_rtl_1                                                             ; altshift_taps   ; work         ;
+;       |shift_taps_oev:auto_generated|  ; 31 (12)             ; 19 (7)                    ; 768               ; 0          ; 0    ; 0            ; |fir_filter|altshift_taps:shift_reg_rtl_1|shift_taps_oev:auto_generated                               ; shift_taps_oev  ; work         ;
+;          |altsyncram_bjc1:altsyncram5| ; 0 (0)               ; 0 (0)                     ; 768               ; 0          ; 0    ; 0            ; |fir_filter|altshift_taps:shift_reg_rtl_1|shift_taps_oev:auto_generated|altsyncram_bjc1:altsyncram5   ; altsyncram_bjc1 ; work         ;
+;          |cntr_93h:cntr6|              ; 11 (11)             ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |fir_filter|altshift_taps:shift_reg_rtl_1|shift_taps_oev:auto_generated|cntr_93h:cntr6                ; cntr_93h        ; work         ;
+;          |cntr_ljf:cntr1|              ; 8 (8)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |fir_filter|altshift_taps:shift_reg_rtl_1|shift_taps_oev:auto_generated|cntr_ljf:cntr1                ; cntr_ljf        ; work         ;
++----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+

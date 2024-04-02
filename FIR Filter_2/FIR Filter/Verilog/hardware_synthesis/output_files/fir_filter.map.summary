@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Mon Apr 01 19:07:49 2024
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : fir_filter
+Top-level Entity Name : fir_filter
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 316
+Total pins : 50
+Total virtual pins : 0
+Total block memory bits : 1,552
+Total DSP Blocks : 2
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 0
+Total DLLs : 0

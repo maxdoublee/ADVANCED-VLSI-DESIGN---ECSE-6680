@@ -1,0 +1,48 @@
+Thermal Power Dissipation by Block Type report for fir_filter
+Mon Apr 01 19:15:17 2024
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Thermal Power Dissipation by Block Type
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Thermal Power Dissipation by Block Type                                                                                                                                                                           ;
++--------------------+-----------------------------------+-----------------------------+--------------------------------+-------------------------------+-----------------------------------------------------------+
+; Block Type         ; Total Thermal Power by Block Type ; Block Thermal Dynamic Power ; Block Thermal Static Power (1) ; Routing Thermal Dynamic Power ; Block Average Toggle Rate (millions of transitions / sec) ;
++--------------------+-----------------------------------+-----------------------------+--------------------------------+-------------------------------+-----------------------------------------------------------+
+; M10K block         ; 2.31 mW                           ; 2.31 mW                     ; --                             ; 0.00 mW                       ;    0.000                                                  ;
+; DSP block          ; 0.30 mW                           ; 0.30 mW                     ; --                             ; 0.00 mW                       ;    0.000                                                  ;
+; Combinational cell ; 0.18 mW                           ; 0.17 mW                     ; --                             ; 0.00 mW                       ;   19.156                                                  ;
+; Clock enable block ; 0.64 mW                           ; 0.00 mW                     ; --                             ; 0.64 mW                       ;  100.050                                                  ;
+; Register cell      ; 0.76 mW                           ; 0.27 mW                     ; --                             ; 0.50 mW                       ;    9.865                                                  ;
+; I/O                ; 2.38 mW                           ; 0.87 mW                     ; 1.50 mW                        ; 0.00 mW                       ;    4.374                                                  ;
++--------------------+-----------------------------------+-----------------------------+--------------------------------+-------------------------------+-----------------------------------------------------------+
+(1) The "Block Thermal Static Power" for all block types except Pins and the Voltage Regulator, if one exists, is part of the "Core Static Thermal Power Dissipation" value found on the PowerPlay Power Analyzer-->Summary report panel. The "Core Static Thermal Power Dissipation" also contains the thermal static power dissipated by the routing.
+
+
