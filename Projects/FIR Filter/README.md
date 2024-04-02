@@ -49,11 +49,11 @@ Below are the conceptual diagrams representing the architecture of our FIR filte
 
 - **Pipelined FIR Filter Structure**:
   
-[![Pipelined FIR Filter Structure](https://www.mathworks.com/help/dsphdl/ug/fir_arch_systolic_sym.png)]
+![Pipelined FIR Filter Structure](https://www.mathworks.com/help/dsphdl/ug/fir_arch_systolic_sym.png)
 
 - **Parallel Processing in FIR Filter (L=2)**:
   
-[![Parallel Processing in FIR Filter](https://i.stack.imgur.com/O4xUz.png)]
+![Parallel Processing in FIR Filter](https://i.stack.imgur.com/O4xUz.png)
 
 These diagrams offer a visual understanding of the filter's internal structure and operation flow, showcasing the data movement through the filter stages and the parallel processing of input samples.
 
