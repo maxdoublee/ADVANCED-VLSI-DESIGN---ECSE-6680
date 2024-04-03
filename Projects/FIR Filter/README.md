@@ -49,7 +49,7 @@ Below are the conceptual diagrams representing the architecture of our FIR filte
 
 - **Pipelined FIR Filter Structure**:
 
-<img src="https://www.mathworks.com/help/dsphdl/ug/fir_arch_systolic_sym.png" width="300">
+<img src="https://www.mathworks.com/help/dsphdl/ug/fir_arch_systolic_sym.png" width="1000">
 
 - **Parallel Processing in FIR Filter (L=2)**:
 
