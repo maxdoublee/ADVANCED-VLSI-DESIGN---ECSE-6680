@@ -163,10 +163,12 @@ output_signal_overflow_quantized = filter(b_quantized_double, 1, overflow_input_
 % Simple way to check is to look for the maximum and minimum values in the output signal
 max_output_unquantized = max(output_signal_overflow_unquantized);
 max_output_quantized = max(output_signal_overflow_quantized);
+minValue_unquantized = min(output_signal_overflow_unquantized);
 minValue_quantized = min(output_signal_overflow_quantized);
 
 fprintf('Maximum Output Amplitude (Unquantized): %.2f\n', max_output_unquantized);
 fprintf('Maximum Output Amplitude (Quantized): %.2f\n', max_output_quantized);
+fprintf('Minimum Output Amplitude (Unquantized): %.2f\n', minValue_unquantized);
 fprintf('Minimum Output Amplitude (Quantized): %.2f\n', minValue_quantized);
 
 figure;
