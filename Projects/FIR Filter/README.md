@@ -65,7 +65,7 @@ Both pipelining and parallel processing are pivotal in the pursuit of a filter d
 
 ### MATLAB Analysis
 
-The primary objective of this MATLAB analysis was to assess the impact of quantization on a 100-tap low-pass FIR filter. Figures 7 and 8 offer a deeper look into the frequency domain, contrasting the original and quantized filters. The transition band between the passband and stopband is of particular interest, showing the effect of quantization on the filter's sharpness and roll-off characteristics. A narrower transition band correlates with higher filter order and complexity, providing a critical comparison point for the two implementations.
+The primary objective of this MATLAB analysis was to assess the impact of quantization on a 100-tap low-pass FIR filter. Figures below offer a deeper look into the frequency domain, contrasting the original and quantized filters. The transition band between the passband and stopband is of particular interest, showing the effect of quantization on the filter's sharpness and roll-off characteristics. A narrower transition band correlates with higher filter order and complexity, providing a critical comparison point for the two implementations.
 
 ![Magnitude Response (Unquantized)](https://github.com/maxdoublee/ADVANCED-VLSI-DESIGN---ECSE-6680/blob/main/Projects/FIR%20Filter/MATLAB/images/unquantized%20magnitude%20fir%20filter%20response.png)
 *Magnitude Response (Unquantized)*
@@ -118,7 +118,7 @@ Sweeping signal frequency analysis further elucidates the filter's ability to ma
 
 #### Impulse response
 
-The impulse responses for both the unquantized and quantized filters are presented in Figures 5. This figure visually represents the differences in the filter's reaction to a delta function input. The response's spread and magnitude clearly depict the smoothing effect that quantization imparts on the system.
+The impulse responses for both the unquantized and quantized filters are presented in figures below. This figure visually represents the differences in the filter's reaction to a delta function input. The response's spread and magnitude clearly depict the smoothing effect that quantization imparts on the system.
 
 ![Impulse Response (Unquantized Vs. Quantized)](https://github.com/maxdoublee/ADVANCED-VLSI-DESIGN---ECSE-6680/blob/main/Projects/FIR%20Filter/MATLAB/images/impulse%20response.png)
 *Impulse Response (Unquantized Vs. Quantized)*
