@@ -70,16 +70,21 @@ The primary objective of this MATLAB analysis was to assess the impact of quanti
 ![Magnitude Response (Unquantized)](https://github.com/maxdoublee/ADVANCED-VLSI-DESIGN---ECSE-6680/blob/main/Projects/FIR%20Filter/MATLAB/images/unquantized%20magnitude%20fir%20filter%20response.png)
 *Magnitude Response (Unquantized)*
 
+
 ![Magnitude Response (Quantized)](https://github.com/maxdoublee/ADVANCED-VLSI-DESIGN---ECSE-6680/blob/main/Projects/FIR%20Filter/MATLAB/images/quantized%20magnitude%20fir%20filter%20response.png)
 *Magnitude Response (Quantized)*
 
+
 The phase response of a filter is another pivotal aspect that determines the filter's performance in time-sensitive applications. It provides information about the phase shift introduced by the filter at various frequencies. Figures depicting the phase response for both unquantized and quantized filters are essential for understanding how quantization affects the temporal characteristics of the filter's output. The aim is to have minimal phase distortion between the unquantized and quantized filters, preserving the waveform's original timing and structural integrity.
+
 
 ![Phase Response (Unquantized)](https://github.com/maxdoublee/ADVANCED-VLSI-DESIGN---ECSE-6680/blob/main/Projects/FIR%20Filter/MATLAB/images/unquantized%20phase%20response%20.png)
 *Phase Response (Unquantized)*
 
+
 ![Phase Response (Quantized)](https://github.com/maxdoublee/ADVANCED-VLSI-DESIGN---ECSE-6680/blob/main/Projects/FIR%20Filter/MATLAB/images/quantized%20phase%20response%20.png)
 *Phase Response (Quantized)*
+
 
 To further prove the functionality, a testbench was designed to evaluate the performance of both unquantized and quantized FIR filters under various conditions. The sampling frequency (48000 Hz) is set well above the Nyquist rate to ensure accurate frequency representation.
 
@@ -167,7 +172,7 @@ The clock signal used in the FIR filter hardware implementation labeled clk, ope
 
 A detailed report on resource utilization showed that the design of the FIR filter's implementation on a Cyclone V FPGA demonstrates minimal usage of logic elements and registers, with less than 1% of the available Adaptive Logic Modules (ALMs), with a modest count of 246 registers deployed. Memory consumption is also minimal, utilizing just a fraction of the available block memory bits, ensuring ample room for further expansion or concurrent processes. This efficient use of space is crucial for cost-effective scalability and for accommodating additional functionalities in the FPGA.
 
-![Resource Utilization](https://github.com/maxdoublee/ADVANCED-VLSI-DESIGN---ECSE-6680/blob/main/Projects/FIR%20Filter/Verilog/images/resource%20utilization%20.png)
+![Resource Utilization](https://github.com/maxdoublee/ADVANCED-VLSI-DESIGN---ECSE-6680/blob/main/Projects/FIR%20Filter/Verilog/images/compilation%20report.png)
 *Resource Utilization*
 
 #### Timing Closure
@@ -175,6 +180,7 @@ A detailed report on resource utilization showed that the design of the FIR filt
 The Multi-Corner Summary reported a positive timing slack of 0.103 ns, even at the worst-case corner, which simulates the fastest operational scenario at 1100mV and typical operating conditions. A zero Total Negative Slack (TNS) further confirms that all timing constraints are met, ensuring the design's functionality is upheld even under the most demanding circumstances. This suggests a robust design, capable of stable performance without any timing violations, crucial for reliable real-time applications.
 
 ![Multi-Corner Summary](https://github.com/maxdoublee/ADVANCED-VLSI-DESIGN---ECSE-6680/blob/main/Projects/FIR%20Filter/Verilog/images/critical%20path.png)
+
 *Multi-Corner Summary*
 
 #### DSP Block Utilization
@@ -182,6 +188,7 @@ The Multi-Corner Summary reported a positive timing slack of 0.103 ns, even at t
 The DSP Block Usage is minimal, with only two DSP blocks employed, specifically two independent 18x18 multipliers, one fixed-point signed multiplier, and one fixed-point mixed-sign multiplier. This use of DSP blocks aligns with the parallel processing strategy of the filter, allowing for efficient real-time computation while maintaining a conservative footprint on the FPGA’s DSP resources. This conservative use signifies the design's lower power consumption and leaves room for additional parallel operations if necessary. 
 
 ![DSP Block Usage Summary](https://github.com/maxdoublee/ADVANCED-VLSI-DESIGN---ECSE-6680/blob/main/Projects/FIR%20Filter/Verilog/images/dsp%20usage.png)
+
 *DSP Block Usage Summary*
 
 #### Detailed Analysis of Logic Utilization
