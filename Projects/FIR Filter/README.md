@@ -20,7 +20,9 @@ As part of the verification process, I visualized the filter's frequency respons
 To facilitate a seamless transition from Matlab design to hardware implementation, the quantized filter coefficients were exported to a text file in hexadecimal format (see, [quantized_coefficients.txt](./Projects/FIR%20Filter/MATLAB/hardware_inputs/quantized_coefficients.txt)), which could then be directly utilized in Verilog code for FPGA programming. This crucial step bridges the gap between theoretical design and practical deployment, ensuring that the FIR filter design realized in Matlab could be reproduced in a hardware environment, with careful consideration given to the inherent challenges posed by quantization and fixed-point arithmetic.
 
 Links to the mentioned MATLAB scripts, including the unquantized and quantized versions of this low-pass FIR filter:
+
 Unquantized: [Filter_unquantized.m](./Projects/FIR%20Filter/MATLAB/design/Filter_unquantized.m)
+
 Quantized: [Filter_quantized.m](./Projects/FIR%20Filter/MATLAB/design/Filter_quantized.m)
 
 ### Verilog Implementation
