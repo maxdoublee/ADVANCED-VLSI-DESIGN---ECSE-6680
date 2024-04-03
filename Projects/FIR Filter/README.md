@@ -50,12 +50,10 @@ Below are the conceptual diagrams representing the architecture of our FIR filte
 - **Pipelined FIR Filter Structure**:
 
 <img src="https://www.mathworks.com/help/dsphdl/ug/fir_arch_systolic_sym.png" width="300">
-![Pipelined FIR Filter Structure](https://www.mathworks.com/help/dsphdl/ug/fir_arch_systolic_sym.png)
 
 - **Parallel Processing in FIR Filter (L=2)**:
 
 <img src="https://i.stack.imgur.com/O4xUz.png" width="300">
-![Parallel Processing in FIR Filter](https://i.stack.imgur.com/O4xUz.png)
 
 These diagrams offer a visual understanding of the filter's internal structure and operation flow, showcasing the data movement through the filter stages and the parallel processing of input samples.
 
@@ -115,7 +113,7 @@ Sweeping signal frequency analysis further elucidates the filter's ability to ma
 
 The impulse responses for both the unquantized and quantized filters are presented in Figures 5. This figure visually represents the differences in the filter's reaction to a delta function input. The response's spread and magnitude clearly depict the smoothing effect that quantization imparts on the system.
 
-![Impulse Response (Unquantized Vs. Quantized)](https://github.com/maxdoublee/ADVANCED-VLSI-DESIGN---ECSE-6680/blob/main/Projects/FIR%20Filter/MATLAB/images/unquantized%20magnitude%20fir%20filter%20response.png)
+![Impulse Response (Unquantized Vs. Quantized)](https://github.com/maxdoublee/ADVANCED-VLSI-DESIGN---ECSE-6680/blob/main/Projects/FIR%20Filter/MATLAB/images/impulse%20response.png)
 *Figure 5: Impulse Response (Unquantized Vs. Quantized)*
 
 #### Harmonic Distortion Analysis (THD)
@@ -131,7 +129,7 @@ Total Harmonic Distortion (THD) analysis is a critical metric for evaluating the
 
 Intermodulation distortion (IMD) is a critical metric used to evaluate the linearity of an audio system and its ability to reproduce multiple frequencies simultaneously without distortion. In the context of FIR filters, IMD can illustrate how the quantization process might introduce non-linearities into the system. The below figure contrasts the IMD performance of the unquantized and quantized filters. A closer IMD profile of the quantized to the unquantized filter indicates that the quantization process preserves the filter's linearity to a significant extent.
 
-![Intermodulation Distortion (Unquantized Vs. Quantized)](https://github.com/maxdoublee/ADVANCED-VLSI-DESIGN---ECSE-6680/blob/main/Projects/FIR%20Filter/MATLAB/images/quantized%20magnitude%20fir%20filter%20response.png)
+![Intermodulation Distortion (Unquantized Vs. Quantized)](https://github.com/maxdoublee/ADVANCED-VLSI-DESIGN---ECSE-6680/blob/main/Projects/FIR%20Filter/MATLAB/images/Intermodulation%20Distortion.png)
 *Figure 6: Intermodulation Distortion (Unquantized Vs. Quantized)*
 
 #### Overflow Testing
@@ -203,5 +201,7 @@ In conclusion, the project stands as a testament to the efficacy of integrating 
 ## Reference Links
 
 https://www.mathworks.com/help/signal/ug/fir-filter-design.html
+
 https://www.mathworks.com/help/signal/ref/lowpass.html
+
 https://www.mathworks.com/help/fixedpoint/ref/embedded.fimath.html
