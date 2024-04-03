@@ -53,7 +53,7 @@ Below are the conceptual diagrams representing the architecture of our FIR filte
 
 - **Parallel Processing in FIR Filter (L=2)**:
 
-<img src="https://i.stack.imgur.com/O4xUz.png" width="300">
+<img src="https://i.stack.imgur.com/O4xUz.png" width="1000">
 
 These diagrams offer a visual understanding of the filter's internal structure and operation flow, showcasing the data movement through the filter stages and the parallel processing of input samples.
 
