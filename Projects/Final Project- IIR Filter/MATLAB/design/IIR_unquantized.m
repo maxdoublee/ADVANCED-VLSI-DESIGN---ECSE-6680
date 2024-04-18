@@ -9,11 +9,13 @@ Fs = 1;            % Normalized frequency (since MATLAB uses normalized frequenc
 [N, Wn] = ellipord(Fpass, Fstop, Apass, Astop);
 
 % Design the elliptic IIR filter
+% Compared to the FIR, the IIR filter design calculates the filter order required to      
+% compute the stopband attenuation directly, so it doesn't require an iterative approach
 [b, a] = ellip(N, Apass, Astop, Wn, 'low');
 
 % Create a filter object
 Hd = dfilt.df2t(b, a);
 
 % Analyze the filter
-fvtool(Hd, 'Analysis', 'freq'); % Frequency response
-fvtool(Hd, 'Analysis', 'phase'); % Phase response
+fvtool(Hd, 'Analysis', 'magnitude'); % Frequency response
+fvtool(Hd, 'Analysis', 'phase'); % Frequency response
