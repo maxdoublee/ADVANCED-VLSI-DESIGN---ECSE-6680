@@ -51,9 +51,9 @@ for i = 1:length(b_unquantized)
 end
 
 % Iterate over each coefficient
-for i = 1:length(a_unquantized)
+for i = 1:length(b_quantized)
     % Convert each coefficient to fixed-point representation
-    fixedPointValue = fi(a_unquantized(i), 1, num_bits, num_bits - 1); % Using num_bits - 1 for fraction length
+    fixedPointValue = fi(b_quantized(i), 1, num_bits, num_bits - 1); % Using num_bits - 1 for fraction length
     
     % Convert to hexadecimal string
     hexString = fixedPointValue.hex;
