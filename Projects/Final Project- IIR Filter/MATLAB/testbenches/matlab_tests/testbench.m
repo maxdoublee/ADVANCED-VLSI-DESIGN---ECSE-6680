@@ -2,19 +2,19 @@
 fs = 48000;         % Sampling frequency in Hz, exceeds the minimum required to satisfy the Nyquist criterion for the frequencies of interest in this project
 f_sin = 1000;       % Sine wave frequency in Hz
 t = 0:1/fs:1-1/fs;  % Time vector
-
-% ===================== Signal to Noise Ratio (SNR) and Estimated Number of Bits (ENOB) =====================
+ 
+% % ===================== Signal to Noise Ratio (SNR) and Estimated Number of Bits (ENOB) =====================
 fprintf('\nSNR and ENOB Testing:\n');
 % Generating a sine wave input signal
 input_signal = sin(2*pi*f_sin*t);
 
 % Generating noise by filtering random noise through the filter
-noise_unquantized = filter(b, a, 1, randn(size(t)));
-noise_quantized = filter(b_quantized_double, 1, randn(size(t)));
+noise_unquantized = filter(b_unquantized, a_unquantized, randn(size(t)));
+noise_quantized = filter(b_quantized_double, a_quantized_double, randn(size(t)));
 
 % Passing the sine wave and noise through both unquantized and quantized filters
-output_signal_unquantized = filter(b, 1, input_signal + noise_unquantized);
-output_signal_quantized = filter(b_quantized_double, 1, input_signal + noise_quantized);
+output_signal_unquantized = filter(b_unquantized, a_unquantized, input_signal + noise_unquantized);
+output_signal_quantized = filter(b_quantized_double, a_quantized_double, input_signal + noise_quantized);
 
 % First compute the Power Spectral Density (PSD) of the output signals
 [psd_unquantized, f] = pwelch(output_signal_unquantized, [], [], [], fs);
@@ -51,13 +51,18 @@ amplitudes = linspace(0.01, 1, 10);
 
 for amp = amplitudes
     input_signal_amp = amp * sin(2*pi*f_sin*t);
-    output_signal_amp_unquantized = filter(b, 1, input_signal_amp + noise_unquantized);
-    output_signal_amp_quantized = filter(b_quantized_double, 1, input_signal_amp + noise_quantized);
-    
-    % Measuring SNR against the original amplitude modulated signal
-    snr_amp_unquantized = snr(output_signal_amp_unquantized - input_signal_amp, noise_unquantized);
-    snr_amp_quantized = snr(output_signal_amp_quantized - input_signal_amp, noise_quantized);
-    
+    output_signal_amp_unquantized = filter(b_unquantized, a_unquantized, input_signal_amp + noise_unquantized);
+    output_signal_amp_quantized = filter(b_quantized_double, a_quantized_double, input_signal_amp + noise_quantized);
+
+    % SNR calculation should be done by comparing the filtered signal to the noise-free input
+    % Hence, subtracting the un-noised input signal from the output to isolate noise for SNR calculation
+    residual_noise_unquantized = output_signal_amp_unquantized - input_signal_amp;
+    residual_noise_quantized = output_signal_amp_quantized - input_signal_amp;
+
+    % Calculate SNR using the residual noise as the noise term
+    snr_amp_unquantized = snr(input_signal_amp, residual_noise_unquantized);
+    snr_amp_quantized = snr(input_signal_amp, residual_noise_quantized);
+
     fprintf('Amplitude: %.2f - Unquantized SNR: %.2f dB, Quantized SNR: %.2f dB\n', amp, snr_amp_unquantized, snr_amp_quantized);
 end
 
@@ -76,10 +81,12 @@ frequencies = linspace(Fpass_Hz, Fstop_Hz, 10);
 
 for freq = frequencies
     input_signal_sweep = sin(2*pi*freq*t);
-    output_signal_unquantized = filter(b, 1, input_signal_sweep + noise_unquantized);
-    output_signal_quantized = filter(b_quantized_double, 1, input_signal_sweep + noise_quantized);
-    snr_unquantized = snr(output_signal_unquantized - input_signal_sweep, noise_unquantized);
-    snr_quantized = snr(output_signal_quantized - input_signal_sweep, noise_quantized);
+    output_signal_unquantized = filter(b_unquantized, a_unquantized, input_signal_sweep + noise_unquantized);
+    output_signal_quantized = filter(b_quantized_double, a_quantized_double, input_signal_sweep + noise_quantized);
+    residual_noise_unquantized = output_signal_unquantized - input_signal_sweep;
+    residual_noise_quantized = output_signal_quantized - input_signal_sweep;
+    snr_amp_unquantized = snr(input_signal_sweep, residual_noise_unquantized);
+    snr_amp_quantized = snr(input_signal_sweep, residual_noise_quantized);
     fprintf('Frequency: %.2f Hz - Unquantized SNR: %.2f dB, Quantized SNR: %.2f dB\n', freq, snr_unquantized, snr_quantized);
 end
 
@@ -88,8 +95,8 @@ end
 impulse_input = zeros(size(t)); impulse_input(1) = 1;
 
 % Apply filters to impulse input 
-impulse_response_unquantized = filter(b, a, 1, impulse_input);
-impulse_response_quantized = filter(bq.Numerator, aq.Numerator, impulse_input); % Quantized
+impulse_response_unquantized = filter(b_unquantized, a_unquantized, impulse_input);
+impulse_response_quantized = filter(b_quantized_double, a_quantized_double, impulse_input); % Quantized
 
 % Plot impulse responses
 figure;
@@ -109,8 +116,8 @@ xlim([0 0.01]);
 
 % ===================== Total Harmonic Distortion (THD) =====================
 % Use generated sine wave input for the test signal for the THD calculation
-output_signal_unquantized = filter(b, 1, input_signal);
-output_signal_quantized = filter(b_quantized_double, 1, input_signal);
+output_signal_unquantized = filter(b_unquantized, a_unquantized, input_signal);
+output_signal_quantized = filter(b_quantized_double, a_quantized_double, input_signal);
 
 thd_unquantized = thd(output_signal_unquantized, fs);
 thd_quantized = thd(output_signal_quantized, fs);
@@ -128,8 +135,8 @@ f2 = 1200; % Frequency 2 for IMD signal
 input_signal_imd = sin(2*pi*f1*t) + sin(2*pi*f2*t);
 
 % Filtering and analyzing the IMD test signal
-output_signal_imd_unquantized = filter(b, 1, input_signal_imd);
-output_signal_imd_quantized = filter(b_quantized_double, 1, input_signal_imd);
+output_signal_imd_unquantized = filter(b_unquantized, a_unquantized, input_signal_imd);
+output_signal_imd_quantized = filter(b_quantized_double, a_quantized_double, input_signal_imd);
 
 % Spectrum analysis to observe IMD products
 [psd_imd_unquantized, f_imd] = pwelch(output_signal_imd_unquantized, [], [], [], fs);
@@ -156,8 +163,8 @@ overflow_test_amplitude = 32767;
 overflow_input_signal = overflow_test_amplitude * sin(2*pi*f_sin*t);
 
 % Apply filters to the high amplitude input signal
-output_signal_overflow_unquantized = filter(b, 1, overflow_input_signal);
-output_signal_overflow_quantized = filter(b_quantized_double, 1, overflow_input_signal);
+output_signal_overflow_unquantized = filter(b_unquantized, a_unquantized, overflow_input_signal);
+output_signal_overflow_quantized = filter(b_quantized_double, a_quantized_double, overflow_input_signal);
 
 % Analyze the output to see if overflow handling (saturation) was effective
 % Simple way to check is to look for the maximum and minimum values in the output signal

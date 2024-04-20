@@ -3,7 +3,6 @@ Fpass = 0.2;       % Passband edge
 Fstop = 0.23;      % Stopband edge
 Apass = 1;         % Passband ripple (dB)
 Astop = 80;        % Stopband attenuation (dB)
-Fs = 1;            % Normalized frequency (since MATLAB uses normalized frequency for digital filters)
 
 % Calculate the necessary order and natural frequency
 [N, Wn] = ellipord(Fpass, Fstop, Apass, Astop);
@@ -11,26 +10,38 @@ Fs = 1;            % Normalized frequency (since MATLAB uses normalized frequenc
 % Bit depth for quantization
 num_bits = 16;
 
-[b, a] = ellip(N, Apass, Astop, Wn, 'low');
+% Configuration of fixed-point math properties for saturation on overflow
+Fm = fimath('OverflowAction','Saturate','RoundingMethod','Floor','ProductMode','SpecifyPrecision', ...
+'ProductWordLength',num_bits,'ProductFractionLength',num_bits-1,'SumMode','SpecifyPrecision', ...
+'SumWordLength',num_bits,'SumFractionLength',num_bits-1);
+
+[b_unquantized, a_unquantized] = ellip(N, Apass, Astop, Wn, 'low');
 
 % Analyze quantization effects
-bq = fi(b, 1, num_bits); % 16-bit signed fixed-point representation of 'b'
-aq = fi(a, 1, num_bits); % 16-bit signed fixed-point representation of 'a'
+b_quantized = fi(b_unquantized, 1, num_bits, num_bits - 1, 'fimath', Fm); % 16-bit signed fixed-point representation of 'b'
+a_quantized = fi(a_unquantized, 1, num_bits, num_bits - 1, 'fimath', Fm); % 16-bit signed fixed-point representation of 'a'
+
+% Convert fixed-point coefficients back to double precision 
+b_quantized_double = double(b_quantized);
+a_quantized_double = double(a_quantized);
 
 % Create a quantized filter object
-Hdq = dfilt.df2t(bq, aq);
+Hdq = dfilt.df2t(b_quantized_double, a_quantized_double);
 
 % Analyze the filter
-fvtool(Hdq, 'Analysis', 'magnitude'); % Frequency response
-fvtool(Hdq, 'Analysis', 'phase'); % Frequency response
+h = fvtool(Hdq, 'Analysis', 'magnitude');
+ax = get(h, 'CurrentAxes'); % Get the handle to the axes of the FVTool
+set(ax, 'YLim', [-160 5]); % Set Y-axis limits to show more detail in the stopband
+fvtool(Hdq, 'Analysis', 'phase');
+drawnow;
 
 % Open file for writing hex values
 fileID = fopen('quantized_coefficients.txt', 'w');
 
-% Iterate over each 'b' coefficient
-for i = 1:length(b)
+% Iterate over each coefficient
+for i = 1:length(b_unquantized)
     % Convert each coefficient to fixed-point representation
-    fixedPointValue = fi(b(i), 1, num_bits, num_bits - 1); % Using num_bits - 1 for fraction length
+    fixedPointValue = fi(b_unquantized(i), 1, num_bits, num_bits - 1); % Using num_bits - 1 for fraction length
     
     % Convert to hexadecimal string
     hexString = fixedPointValue.hex;
@@ -39,10 +50,10 @@ for i = 1:length(b)
     fprintf(fileID, '%s\n', hexString);
 end
 
-% Iterate over each 'a' coefficient
-for i = 1:length(a)
+% Iterate over each coefficient
+for i = 1:length(a_unquantized)
     % Convert each coefficient to fixed-point representation
-    fixedPointValue = fi(a(i), 1, num_bits, num_bits - 1); % Using num_bits - 1 for fraction length
+    fixedPointValue = fi(a_unquantized(i), 1, num_bits, num_bits - 1); % Using num_bits - 1 for fraction length
     
     % Convert to hexadecimal string
     hexString = fixedPointValue.hex;

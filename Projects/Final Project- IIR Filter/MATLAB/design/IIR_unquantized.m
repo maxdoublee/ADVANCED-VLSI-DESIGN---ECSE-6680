@@ -17,5 +17,9 @@ Fs = 1;            % Normalized frequency (since MATLAB uses normalized frequenc
 Hd = dfilt.df2t(b, a);
 
 % Analyze the filter
-fvtool(Hd, 'Analysis', 'magnitude'); % Frequency response
+h = fvtool(Hd, 'Analysis', 'magnitude'); % Frequency response
+ax = get(h, 'CurrentAxes'); % Get the handle to the axes of the FVTool
+set(ax, 'YLim', [-160 5]); % Set Y-axis limits to show more detail in the stopband
+
 fvtool(Hd, 'Analysis', 'phase'); % Frequency response
+drawnow;

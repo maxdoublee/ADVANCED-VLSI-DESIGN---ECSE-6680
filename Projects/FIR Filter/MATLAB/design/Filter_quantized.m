@@ -77,9 +77,9 @@ grid(hFVT.CurrentAxes, 'on');
 fileID = fopen('quantized_coefficients.txt', 'w');
 
 % Iterate over each coefficient
-for i = 1:length(b_quantized_double)
+for i = 1:length(b_unquantized)
     % Convert each coefficient to fixed-point representation
-    fixedPointValue = fi(b_quantized_double(i), 1, 16, 15); % 1 = signed, 16 = number of bits, 15 = fraction length
+    fixedPointValue = fi(b_unquantized(i), 1, 16, 15); % 1 = signed, 16 = number of bits, 15 = fraction length
     
     % Convert to hexadecimal string
     hexString = fixedPointValue.hex;
