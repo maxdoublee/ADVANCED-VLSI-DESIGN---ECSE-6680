@@ -14,8 +14,8 @@ parameter CLK_PERIOD = 20.833; // Clock period in ns for a 48kHz sampling rate
 parameter SAMPLES = 48000; // Adjust this based on the length of the test
 
 // Test signals
-reg clk = 0;
-reg rst = 1;
+reg clk;
+reg rst;
 wire signed [DATA_WIDTH-1:0] sine_wave_out;
 reg [15:0] amplitude_control;
 wire signed [31:0] filtered_output;

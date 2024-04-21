@@ -35,35 +35,33 @@ set(ax, 'YLim', [-160 5]); % Set Y-axis limits to show more detail in the stopba
 fvtool(Hdq, 'Analysis', 'phase');
 drawnow;
 
-% Open file for writing hex values
-fileID = fopen('quantized_coefficients.txt', 'w');
+% Open files for writing hex values for b and a coefficients separately
+fileID_b = fopen('coeff_b.txt', 'w');
+fileID_a = fopen('coeff_a.txt', 'w');
 
-% Iterate over each coefficient
-for i = 1:length(b_unquantized)
-    % Convert each coefficient to fixed-point representation
-    fixedPointValue = fi(b_unquantized(i), 1, num_bits, num_bits - 1); % Using num_bits - 1 for fraction length
-    
-    % Convert to hexadecimal string
-    hexString = fixedPointValue.hex;
-    
-    % Write hex string to file
-    fprintf(fileID, '%s\n', hexString);
-end
-
-% Iterate over each coefficient
+% Iterate over b coefficient
 for i = 1:length(b_quantized)
     % Convert each coefficient to fixed-point representation
-    fixedPointValue = fi(b_quantized(i), 1, num_bits, num_bits - 1); % Using num_bits - 1 for fraction length
-    
+    fixedPointValue = fi(b_quantized(i), 1, num_bits, num_bits - 1);
     % Convert to hexadecimal string
     hexString = fixedPointValue.hex;
-    
     % Write hex string to file
-    fprintf(fileID, '%s\n', hexString);
+    fprintf(fileID_b, '%s\n', hexString);
 end
 
-% Close the file
-fclose(fileID);
+% Iterate over a coefficient
+for i = 1:length(a_quantized)
+    % Convert each coefficient to fixed-point representation
+    fixedPointValue = fi(a_quantized(i), 1, num_bits, num_bits - 1);
+    % Convert to hexadecimal string
+    hexString = fixedPointValue.hex;
+    % Write hex string to file
+    fprintf(fileID_a, '%s\n', hexString);
+end
+
+% Close the files
+fclose(fileID_b);
+fclose(fileID_a);
 
 % Note: The list of coefficients will appear shorter because an IIR filter can achieve the 
 % desired frequency response with fewer coefficients because of the feedback mechanism

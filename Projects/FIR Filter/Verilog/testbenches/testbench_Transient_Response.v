@@ -15,8 +15,8 @@ parameter IMPULSE_DURATION = 1; // Number of clock cycles for impulse
 parameter TOTAL_DURATION = 10000; 
 
 // Inputs
-reg clk = 0;
-reg rst = 1;
+reg clk;
+reg rst;
 reg signed [DATA_WIDTH-1:0] data_in = 0;
 integer count = 0; // Counter to keep track of the test duration
 

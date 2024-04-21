@@ -12,8 +12,8 @@ parameter DATA_WIDTH = 16;
 parameter CLK_PERIOD = 20.833; // Clock period in ns for a 48kHz sampling rate
 parameter TEST_DURATION = 48000; // Number of clock cycles to run the test
 
-reg clk = 0;
-reg rst = 1;
+reg clk;
+reg rst;
 reg signed [DATA_WIDTH-1:0] overflow_input_signal = 16'h7FFF; // Directly apply max amplitude
 wire signed [31:0] data_out;
 

@@ -12,8 +12,8 @@ parameter DATA_WIDTH = 16;
 parameter CLK_PERIOD = 20.833; // Clock period in ns for 48 kHz sampling rate
 parameter SAMPLES = 48000; // Number of samples for the analysis period
 
-reg clk = 0;
-reg rst = 1;
+reg clk;
+reg rst;
 wire signed [DATA_WIDTH-1:0] sine_wave_1_out, sine_wave_2_out;
 reg [15:0] amplitude_control;
 wire signed [DATA_WIDTH-1:0] imd_test_signal;

@@ -1,0 +1,271 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/mdest/OneDrive/Documents/Advanced_VLSI/ADVANCED-VLSI-DESIGN---ECSE-6680/Projects/FIR Filter/Verilog/modelsim
+viir_filter
+Z0 !s110 1713682917
+!i10b 1
+!s100 ^97g;]gIiWe7b_0G1Nkn@2
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Izzz`ZiMabgK6]WA6=:<WD1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/Users/mdest/OneDrive/Documents/Advanced_VLSI/ADVANCED-VLSI-DESIGN---ECSE-6680/Projects/Final Project- IIR Filter/Verilog/modelsim
+w1713648946
+8C:/Users/mdest/OneDrive/Documents/Advanced_VLSI/ADVANCED-VLSI-DESIGN---ECSE-6680/Projects/Final Project- IIR Filter/Verilog/design/iir_filter.v
+FC:/Users/mdest/OneDrive/Documents/Advanced_VLSI/ADVANCED-VLSI-DESIGN---ECSE-6680/Projects/Final Project- IIR Filter/Verilog/design/iir_filter.v
+!i122 37
+L0 7 74
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1713682917.000000
+!s107 C:/Users/mdest/OneDrive/Documents/Advanced_VLSI/ADVANCED-VLSI-DESIGN---ECSE-6680/Projects/Final Project- IIR Filter/Verilog/design/iir_filter.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/mdest/OneDrive/Documents/Advanced_VLSI/ADVANCED-VLSI-DESIGN---ECSE-6680/Projects/Final Project- IIR Filter/Verilog/design/iir_filter.v|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+vimd_testbench_IIR
+!s110 1713680604
+!i10b 1
+!s100 T4K4`>;:ZnbjgX;0<CZZ70
+R1
+I2VKDB<>OjZdO`keKVN:he0
+R2
+R3
+w1713680523
+8C:/Users/mdest/OneDrive/Documents/Advanced_VLSI/ADVANCED-VLSI-DESIGN---ECSE-6680/Projects/Final Project- IIR Filter/Verilog/testbenches/testbench_Intermodulation Distortion.v
+FC:/Users/mdest/OneDrive/Documents/Advanced_VLSI/ADVANCED-VLSI-DESIGN---ECSE-6680/Projects/Final Project- IIR Filter/Verilog/testbenches/testbench_Intermodulation Distortion.v
+!i122 10
+L0 9 71
+R4
+r1
+!s85 0
+31
+!s108 1713680604.000000
+!s107 C:/Users/mdest/OneDrive/Documents/Advanced_VLSI/ADVANCED-VLSI-DESIGN---ECSE-6680/Projects/Final Project- IIR Filter/Verilog/testbenches/testbench_Intermodulation Distortion.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/mdest/OneDrive/Documents/Advanced_VLSI/ADVANCED-VLSI-DESIGN---ECSE-6680/Projects/Final Project- IIR Filter/Verilog/testbenches/testbench_Intermodulation Distortion.v|
+!i113 1
+R6
+R7
+nimd_testbench_@i@i@r
+vlfsr_noise_generator
+Z8 !s110 1713681552
+!i10b 1
+!s100 mlB[BWNC0Bj63DmSI4N402
+R1
+IQRnHHMFSzMRT8bAocD4bB3
+R2
+R3
+Z9 w1712027903
+8C:/Users/mdest/OneDrive/Documents/Advanced_VLSI/ADVANCED-VLSI-DESIGN---ECSE-6680/Projects/Final Project- IIR Filter/Verilog/signal_generators/lfsr_noise_generator.v
+FC:/Users/mdest/OneDrive/Documents/Advanced_VLSI/ADVANCED-VLSI-DESIGN---ECSE-6680/Projects/Final Project- IIR Filter/Verilog/signal_generators/lfsr_noise_generator.v
+!i122 27
+L0 7 27
+R4
+r1
+!s85 0
+31
+Z10 !s108 1713681552.000000
+!s107 C:/Users/mdest/OneDrive/Documents/Advanced_VLSI/ADVANCED-VLSI-DESIGN---ECSE-6680/Projects/Final Project- IIR Filter/Verilog/signal_generators/lfsr_noise_generator.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/mdest/OneDrive/Documents/Advanced_VLSI/ADVANCED-VLSI-DESIGN---ECSE-6680/Projects/Final Project- IIR Filter/Verilog/signal_generators/lfsr_noise_generator.v|
+!i113 1
+R6
+R7
+voverflow_testbench_IIR
+!s110 1713680847
+!i10b 1
+!s100 6o=gGG@2M0;efznb<C>DW1
+R1
+Ie4_iGgAWY86`:FfXV59<e0
+R2
+R3
+w1713679143
+8C:/Users/mdest/OneDrive/Documents/Advanced_VLSI/ADVANCED-VLSI-DESIGN---ECSE-6680/Projects/Final Project- IIR Filter/Verilog/testbenches/testbench_Overflow.v
+FC:/Users/mdest/OneDrive/Documents/Advanced_VLSI/ADVANCED-VLSI-DESIGN---ECSE-6680/Projects/Final Project- IIR Filter/Verilog/testbenches/testbench_Overflow.v
+!i122 12
+L0 9 57
+R4
+r1
+!s85 0
+31
+!s108 1713680847.000000
+!s107 C:/Users/mdest/OneDrive/Documents/Advanced_VLSI/ADVANCED-VLSI-DESIGN---ECSE-6680/Projects/Final Project- IIR Filter/Verilog/testbenches/testbench_Overflow.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/mdest/OneDrive/Documents/Advanced_VLSI/ADVANCED-VLSI-DESIGN---ECSE-6680/Projects/Final Project- IIR Filter/Verilog/testbenches/testbench_Overflow.v|
+!i113 1
+R6
+R7
+noverflow_testbench_@i@i@r
+vsine_wave_generator
+Z11 !s110 1713682034
+!i10b 1
+!s100 IzRHe^BdiNJ_M:VgaiJfQ3
+R1
+IjJmjVi6>DeH;ZMF:3f4mB0
+R2
+R3
+R9
+8C:/Users/mdest/OneDrive/Documents/Advanced_VLSI/ADVANCED-VLSI-DESIGN---ECSE-6680/Projects/Final Project- IIR Filter/Verilog/signal_generators/sine_wave_generator.v
+FC:/Users/mdest/OneDrive/Documents/Advanced_VLSI/ADVANCED-VLSI-DESIGN---ECSE-6680/Projects/Final Project- IIR Filter/Verilog/signal_generators/sine_wave_generator.v
+!i122 33
+L0 7 30
+R4
+r1
+!s85 0
+31
+Z12 !s108 1713682034.000000
+!s107 C:/Users/mdest/OneDrive/Documents/Advanced_VLSI/ADVANCED-VLSI-DESIGN---ECSE-6680/Projects/Final Project- IIR Filter/Verilog/signal_generators/sine_wave_generator.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/mdest/OneDrive/Documents/Advanced_VLSI/ADVANCED-VLSI-DESIGN---ECSE-6680/Projects/Final Project- IIR Filter/Verilog/signal_generators/sine_wave_generator.v|
+!i113 1
+R6
+R7
+vsine_wave_generator_variable_freq
+R8
+!i10b 1
+!s100 QHK]miBzTmO14B[O[nKJj0
+R1
+Ic^[o?CYE;hoM0KG9zAS:d1
+R2
+R3
+R9
+8C:/Users/mdest/OneDrive/Documents/Advanced_VLSI/ADVANCED-VLSI-DESIGN---ECSE-6680/Projects/Final Project- IIR Filter/Verilog/signal_generators/sine_wave_generator_variable_freq.v
+FC:/Users/mdest/OneDrive/Documents/Advanced_VLSI/ADVANCED-VLSI-DESIGN---ECSE-6680/Projects/Final Project- IIR Filter/Verilog/signal_generators/sine_wave_generator_variable_freq.v
+!i122 28
+L0 7 31
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/mdest/OneDrive/Documents/Advanced_VLSI/ADVANCED-VLSI-DESIGN---ECSE-6680/Projects/Final Project- IIR Filter/Verilog/signal_generators/sine_wave_generator_variable_freq.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/mdest/OneDrive/Documents/Advanced_VLSI/ADVANCED-VLSI-DESIGN---ECSE-6680/Projects/Final Project- IIR Filter/Verilog/signal_generators/sine_wave_generator_variable_freq.v|
+!i113 1
+R6
+R7
+vtestbench_Dynamic_Range_IIR
+!s110 1713680149
+!i10b 1
+!s100 H=5BoUdz<oUH`<fDO1AoF0
+R1
+IQNA8ChYZzg3:KSG4[<@021
+R2
+R3
+w1713664384
+8C:/Users/mdest/OneDrive/Documents/Advanced_VLSI/ADVANCED-VLSI-DESIGN---ECSE-6680/Projects/Final Project- IIR Filter/Verilog/testbenches/testbench_Dynamic_Range.v
+FC:/Users/mdest/OneDrive/Documents/Advanced_VLSI/ADVANCED-VLSI-DESIGN---ECSE-6680/Projects/Final Project- IIR Filter/Verilog/testbenches/testbench_Dynamic_Range.v
+!i122 3
+L0 9 87
+R4
+r1
+!s85 0
+31
+!s108 1713680149.000000
+!s107 C:/Users/mdest/OneDrive/Documents/Advanced_VLSI/ADVANCED-VLSI-DESIGN---ECSE-6680/Projects/Final Project- IIR Filter/Verilog/testbenches/testbench_Dynamic_Range.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/mdest/OneDrive/Documents/Advanced_VLSI/ADVANCED-VLSI-DESIGN---ECSE-6680/Projects/Final Project- IIR Filter/Verilog/testbenches/testbench_Dynamic_Range.v|
+!i113 1
+R6
+R7
+ntestbench_@dynamic_@range_@i@i@r
+vtestbench_freq_sweep_tb_IIR
+!s110 1713681553
+!i10b 1
+!s100 Y`Oa_[0V2NzzV<3;7h7463
+R1
+IPPBn<NeEWSeOcFEoob4cY2
+R2
+R3
+w1713681534
+8C:/Users/mdest/OneDrive/Documents/Advanced_VLSI/ADVANCED-VLSI-DESIGN---ECSE-6680/Projects/Final Project- IIR Filter/Verilog/testbenches/testbench_Sweeping_Signal_Frequency.v
+FC:/Users/mdest/OneDrive/Documents/Advanced_VLSI/ADVANCED-VLSI-DESIGN---ECSE-6680/Projects/Final Project- IIR Filter/Verilog/testbenches/testbench_Sweeping_Signal_Frequency.v
+!i122 29
+L0 9 70
+R4
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/mdest/OneDrive/Documents/Advanced_VLSI/ADVANCED-VLSI-DESIGN---ECSE-6680/Projects/Final Project- IIR Filter/Verilog/testbenches/testbench_Sweeping_Signal_Frequency.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/mdest/OneDrive/Documents/Advanced_VLSI/ADVANCED-VLSI-DESIGN---ECSE-6680/Projects/Final Project- IIR Filter/Verilog/testbenches/testbench_Sweeping_Signal_Frequency.v|
+!i113 1
+R6
+R7
+ntestbench_freq_sweep_tb_@i@i@r
+vtestbench_SNR_ENOB_IIR
+!s110 1713681542
+!i10b 1
+!s100 z>JZAZFdLc6>;]b<lR3090
+R1
+IWe=i43XD9WR2jD`8JYFQF0
+R2
+R3
+w1713681527
+8C:/Users/mdest/OneDrive/Documents/Advanced_VLSI/ADVANCED-VLSI-DESIGN---ECSE-6680/Projects/Final Project- IIR Filter/Verilog/testbenches/testbench_SNR_ENOB.v
+FC:/Users/mdest/OneDrive/Documents/Advanced_VLSI/ADVANCED-VLSI-DESIGN---ECSE-6680/Projects/Final Project- IIR Filter/Verilog/testbenches/testbench_SNR_ENOB.v
+!i122 25
+L0 9 61
+R4
+r1
+!s85 0
+31
+!s108 1713681542.000000
+!s107 C:/Users/mdest/OneDrive/Documents/Advanced_VLSI/ADVANCED-VLSI-DESIGN---ECSE-6680/Projects/Final Project- IIR Filter/Verilog/testbenches/testbench_SNR_ENOB.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/mdest/OneDrive/Documents/Advanced_VLSI/ADVANCED-VLSI-DESIGN---ECSE-6680/Projects/Final Project- IIR Filter/Verilog/testbenches/testbench_SNR_ENOB.v|
+!i113 1
+R6
+R7
+ntestbench_@s@n@r_@e@n@o@b_@i@i@r
+vthd_testbench_IIR
+R11
+!i10b 1
+!s100 ]IY1EaGbmRLPjmzffiKK;1
+R1
+I0Wo4Y7TPGPN5CnjIHkQ2=3
+R2
+R3
+w1713682028
+8C:/Users/mdest/OneDrive/Documents/Advanced_VLSI/ADVANCED-VLSI-DESIGN---ECSE-6680/Projects/Final Project- IIR Filter/Verilog/testbenches/testbench_Total_Harmonic_Distortion.v
+FC:/Users/mdest/OneDrive/Documents/Advanced_VLSI/ADVANCED-VLSI-DESIGN---ECSE-6680/Projects/Final Project- IIR Filter/Verilog/testbenches/testbench_Total_Harmonic_Distortion.v
+!i122 34
+L0 9 74
+R4
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/mdest/OneDrive/Documents/Advanced_VLSI/ADVANCED-VLSI-DESIGN---ECSE-6680/Projects/Final Project- IIR Filter/Verilog/testbenches/testbench_Total_Harmonic_Distortion.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/mdest/OneDrive/Documents/Advanced_VLSI/ADVANCED-VLSI-DESIGN---ECSE-6680/Projects/Final Project- IIR Filter/Verilog/testbenches/testbench_Total_Harmonic_Distortion.v|
+!i113 1
+R6
+R7
+nthd_testbench_@i@i@r
+vtransient_response_tb_IIR
+R0
+!i10b 1
+!s100 gGTWDJV=0I1An1Z=fH7?Q0
+R1
+I5>`D[R>GI4VVUoL?ZN=n21
+R2
+R3
+w1713682903
+8C:/Users/mdest/OneDrive/Documents/Advanced_VLSI/ADVANCED-VLSI-DESIGN---ECSE-6680/Projects/Final Project- IIR Filter/Verilog/testbenches/testbench_Transient_Response.v
+FC:/Users/mdest/OneDrive/Documents/Advanced_VLSI/ADVANCED-VLSI-DESIGN---ECSE-6680/Projects/Final Project- IIR Filter/Verilog/testbenches/testbench_Transient_Response.v
+!i122 38
+L0 9 103
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/mdest/OneDrive/Documents/Advanced_VLSI/ADVANCED-VLSI-DESIGN---ECSE-6680/Projects/Final Project- IIR Filter/Verilog/testbenches/testbench_Transient_Response.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/mdest/OneDrive/Documents/Advanced_VLSI/ADVANCED-VLSI-DESIGN---ECSE-6680/Projects/Final Project- IIR Filter/Verilog/testbenches/testbench_Transient_Response.v|
+!i113 1
+R6
+R7
+ntransient_response_tb_@i@i@r

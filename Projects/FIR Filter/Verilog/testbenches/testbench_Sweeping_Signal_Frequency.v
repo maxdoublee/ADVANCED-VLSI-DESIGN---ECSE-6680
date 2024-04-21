@@ -17,7 +17,7 @@ parameter START_FREQ = 1000;  // Start frequency in Hz for the sweep
 parameter END_FREQ = 2000;    // End frequency in Hz for the sweep
 parameter N = 32;             // Number of bits in phase accumulator
 
-reg clk = 0, rst = 1;
+reg clk, rst;
 real freq;
 real freq_step = (END_FREQ - START_FREQ) / (SWEEP_STEPS - 1);
 integer sweep_idx = 0;

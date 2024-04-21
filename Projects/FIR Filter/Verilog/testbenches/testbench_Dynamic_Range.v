@@ -10,7 +10,6 @@ module testbench_Dynamic_Range;
 
 parameter DATA_WIDTH = 16;
 parameter CLK_PERIOD = 20.833; // Clock period in ns for a 48kHz sampling rate
-parameter SIMULATION_TIME = 100000; // Adjust based on needs
 parameter AMPLITUDE_STEPS = 10; // Number of amplitude steps for dynamic range testing
 
 reg clk, rst;
@@ -31,7 +30,7 @@ lfsr_noise_generator lfsr(
 sine_wave_generator swg (
     .clk(clk),
     .reset(rst),
-    .amplitude(amplitude_control), // Updated to use amplitude control
+    .amplitude(amplitude_control), 
     .sine_wave_out(sine_wave_out)
 );
 
