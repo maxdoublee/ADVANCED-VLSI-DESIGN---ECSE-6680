@@ -63,11 +63,11 @@ This section presents the results of the MATLAB analysis performed on the low-pa
 
 The frequency response of the IIR filter, both unquantized and quantized, is illustrated below. These graphs show how the transition from the passband to the stopband is managed by the filter, highlighting the effects of quantization on the filter's ability to maintain sharp roll-off characteristics.
 
-- **Frequency Response (Unquantized)**
+**Frequency Response (Unquantized)**
   
   ![Frequency Response Unquantized](https://github.com/maxdoublee/ADVANCED-VLSI-DESIGN---ECSE-6680/blob/main/Projects/Final%20Project-%20IIR%20Filter/MATLAB/images/unquantized%20magnitude%20iir%20filter%20response.png)
 
-- **Frequency Response (Quantized)**
+**Frequency Response (Quantized)**
   
   ![Frequency Response Quantized](https://github.com/maxdoublee/ADVANCED-VLSI-DESIGN---ECSE-6680/blob/main/Projects/Final%20Project-%20IIR%20Filter/MATLAB/images/quantized%20magnitude%20iir%20filter%20response.png)
 
@@ -75,11 +75,11 @@ The frequency response of the IIR filter, both unquantized and quantized, is ill
 
 Phase response analysis is crucial for understanding the temporal behavior of the filter. The following figures depict the phase response for both the unquantized and quantized versions of the IIR filter:
 
-- **Phase Response (Unquantized)**
+**Phase Response (Unquantized)**
   
   ![Phase Response Unquantized](https://github.com/maxdoublee/ADVANCED-VLSI-DESIGN---ECSE-6680/blob/main/Projects/Final%20Project-%20IIR%20Filter/MATLAB/images/unquantized%20phase%20response%20.png)
 
-- **Phase Response (Quantized)**
+**Phase Response (Quantized)**
   
   ![Phase Response Quantized](https://github.com/maxdoublee/ADVANCED-VLSI-DESIGN---ECSE-6680/blob/main/Projects/Final%20Project-%20IIR%20Filter/MATLAB/images/quantized%20phase%20response%20.png)
 
@@ -87,28 +87,28 @@ Phase response analysis is crucial for understanding the temporal behavior of th
 
 Comparing the IIR filter with the previously designed FIR filter provides valuable insights into the efficiency and performance of both filter types. Here I look at various metrics such as SNR, ENOB, and dynamic range to assess each filter's capabilities.
 
-- **Signal-to-Noise Ratio (SNR) and Effective Number of Bits (ENOB)**
+**Signal-to-Noise Ratio (SNR) and Effective Number of Bits (ENOB)**
   
-  | Metric        | IIR Filter (dB) | FIR Filter (dB) |
-  |---------------|-----------------|-----------------|
-  | SNR           | Placeholder_SNR_IIR | Placeholder_SNR_FIR |
-  | ENOB          | Placeholder_ENOB_IIR | Placeholder_ENOB_FIR |
+  | Metric        | IIR Unquantized Filter  | IIR Quantized  Filter | FIR Unquantized Filter | FIR Quantized Filter |
+  |---------------|-------------------------|-----------------------|------------------------|----------------------|
+  | SNR (dB)      | 80.29                   | 75.14                 | 5.13                   | 5.26                 |
+  | ENOB (bits)   | 13.33                   | 13.35                 | 0.56                   | 0.58                 |
 
 - **Dynamic Range Test**
   
   | Amplitude | IIR Unquantized SNR (dB) | IIR Quantized SNR (dB) | FIR Unquantized SNR (dB) | FIR Quantized SNR (dB) | 
   |-----------|--------------------------|------------------------|--------------------------|------------------------|
-  | 0.01      | 0.31                     | 0.29                   | 0.31                     | 0.29                   |
+  | 0.01      | 0.40                     | 0.39                   | 0.31                     | 0.29                   |
   | ...       | ...                      | ...                    | ...                      | ...                    |
-  | 1.00      | 0.95                     | 0.97                   | 0.31                     | 0.29                   |
+  | 1.00      | 2.12                     | 2.25                   | 0.95                     | 0.97                   |
 
 - **Sweeping Signal Frequency Test**
 
   | Frequency (Hz) | IIR Unquantized SNR (dB) | IIR Quantized SNR (dB) | FIR Unquantized SNR (dB) | FIR Quantized SNR (dB) | 
   |----------------|--------------------------|------------------------|--------------------------|------------------------|
-  | 4800.00        | 0.31                     | 0.29                   | 0.31                     | 0.29                   |
+  | 4800.00        | 70.73                    | 68.56                  | 1.29                     | 1.30                   |
   | ...            | ...                      | ...                    | ...                      | ...                    |
-  | 5520.00        | 0.95                     | 0.97                   | 0.31                     | 0.29                   |
+  | 5520.00        | 72.97                    | 68.68                  | 5.42                     | 5.46                   |
 
 - **Impulse Response Comparison**
   
@@ -118,8 +118,8 @@ Comparing the IIR filter with the previously designed FIR filter provides valuab
   
   | Filter Type     | THD (dB) |
   |-----------------|----------|
-  | IIR Unquantized |          |
-  | IIR Quantized   |          |
+  | IIR Unquantized | -290.00  |
+  | IIR Quantized   | -289.50  |
   | FIR Unquantized | -297.13  |
   | FIR Quantized   | -297.11  |
 
@@ -131,9 +131,9 @@ Comparing the IIR filter with the previously designed FIR filter provides valuab
   
   | Parameter                        | IIR Unquantized | IIR Quantized | FIR Unquantized | FIR Quantized |
   |----------------------------------|-----------------|---------------|-----------------|---------------| 
-  | Maximum Output Amplitude         | 37785.84        | 37779.91      | 37785.84        | 37779.91      |
-  | Minimum Output Amplitude         | -37785.84       | -37779.91     | -37785.84       | -37779.91     |
-  | Peak-to-Peak Amplitude           | 75559.815912    | 75559.815912  | 75559.815912    | 75559.815912  |
+  | Maximum Output Amplitude         | 37750.09        | 37745.88      | 37785.84        | 37779.91      |
+  | Minimum Output Amplitude         | -37750.09       | -37745.88     | -37785.84       | -37779.91     |
+  | Peak-to-Peak Amplitude           | 75500.180000    | 75491.76      | 75559.815912    | 75559.815912  |
 
 These results highlight the distinct advantages of the IIR filter, particularly in terms of computational efficiency and resource management, while also detailing areas where the FIR filter may offer benefits, such as stability and simplicity.
 
