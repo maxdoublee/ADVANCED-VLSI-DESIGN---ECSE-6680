@@ -94,7 +94,7 @@ Comparing the IIR filter with the previously designed FIR filter provides valuab
   | SNR (dB)      | 80.29                   | 75.14                 | 5.13                   | 5.26                 |
   | ENOB (bits)   | 13.33                   | 13.35                 | 0.56                   | 0.58                 |
 
-- **Dynamic Range Test**
+**Dynamic Range Test**
   
   | Amplitude | IIR Unquantized SNR (dB) | IIR Quantized SNR (dB) | FIR Unquantized SNR (dB) | FIR Quantized SNR (dB) | 
   |-----------|--------------------------|------------------------|--------------------------|------------------------|
@@ -102,7 +102,7 @@ Comparing the IIR filter with the previously designed FIR filter provides valuab
   | ...       | ...                      | ...                    | ...                      | ...                    |
   | 1.00      | 2.12                     | 2.25                   | 0.95                     | 0.97                   |
 
-- **Sweeping Signal Frequency Test**
+**Sweeping Signal Frequency Test**
 
   | Frequency (Hz) | IIR Unquantized SNR (dB) | IIR Quantized SNR (dB) | FIR Unquantized SNR (dB) | FIR Quantized SNR (dB) | 
   |----------------|--------------------------|------------------------|--------------------------|------------------------|
@@ -110,11 +110,11 @@ Comparing the IIR filter with the previously designed FIR filter provides valuab
   | ...            | ...                      | ...                    | ...                      | ...                    |
   | 5520.00        | 72.97                    | 68.68                  | 5.42                     | 5.46                   |
 
-- **Impulse Response Comparison**
+**Impulse Response Comparison**
   
   ![Impulse Response (Unquantized Vs. Quantized)](https://github.com/maxdoublee/ADVANCED-VLSI-DESIGN---ECSE-6680/blob/main/Projects/Final%20Project-%20IIR%20Filter/MATLAB/images/impulse%20response.png)
 
-- **Total Harmonic Distortion (THD)**
+**Total Harmonic Distortion (THD)**
   
   | Filter Type     | THD (dB) |
   |-----------------|----------|
@@ -123,11 +123,11 @@ Comparing the IIR filter with the previously designed FIR filter provides valuab
   | FIR Unquantized | -297.13  |
   | FIR Quantized   | -297.11  |
 
-- **Intermodulation Distortion (IMD)**
+**Intermodulation Distortion (IMD)**
   
   ![IMD Comparison](https://github.com/maxdoublee/ADVANCED-VLSI-DESIGN---ECSE-6680/blob/main/Projects/Final%20Project-%20IIR%20Filter/MATLAB/images/Intermodulation%20Distortion.png)
 
-- **Overflow Test Results**
+**Overflow Test Results**
   
   | Parameter                        | IIR Unquantized | IIR Quantized | FIR Unquantized | FIR Quantized |
   |----------------------------------|-----------------|---------------|-----------------|---------------| 
