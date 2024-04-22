@@ -82,7 +82,7 @@ The phase response of a filter is another pivotal aspect that determines the fil
 *Phase Response (Unquantized)*
 
 
-![Phase Response (Quantized)](https://github.com/maxdoublee/ADVANCED-VLSI-DESIGN---ECSE-6680/blob/main/Projects/FIR%20Filter/MATLAB/images/quantized%20phase%20response%20.png)
+![Phase Response (Quantized)](https://github.com/maxdoublee/ADVANCED-VLSI-DESIGN---ECSE-6680/blob/main/Projects/FIR%20Filter/MATLAB/images/quantized%20phase%20response_1.png)
 *Phase Response (Quantized)*
 
 
